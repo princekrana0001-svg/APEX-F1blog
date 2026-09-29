@@ -1,0 +1,588 @@
+/* ==================================================
+   APEX - ARTICLE PAGE
+================================================== */
+
+
+/* ==================================================
+   ARTICLE HEADER
+================================================== */
+
+.article-header {
+
+    width: 100%;
+
+    background: #111111;
+
+    padding: 110px 20px 70px;
+
+    box-sizing: border-box;
+
+}
+
+
+.article-container {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    box-sizing: border-box;
+
+}
+
+
+.back-link {
+
+    display: inline-block;
+
+    margin-bottom: 35px;
+
+    color: #aaaaaa;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+
+}
+
+
+.back-link:hover {
+
+    color: #ffffff;
+
+}
+
+
+.article-category {
+
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #e10600;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+}
+
+
+.article-header h1 {
+
+    max-width: 950px;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: clamp(55px, 8vw, 105px);
+
+    line-height: 0.95;
+
+    letter-spacing: 2px;
+
+}
+
+
+.article-meta {
+
+    display: flex;
+
+    gap: 25px;
+
+    margin-top: 30px;
+
+    color: #aaaaaa;
+
+    font-size: 13px;
+
+}
+
+
+/* ==================================================
+   ARTICLE IMAGE
+================================================== */
+
+.article-image-section {
+
+    width: 100%;
+
+    background: #f5f5f3;
+
+    padding: 50px 20px 0;
+
+    box-sizing: border-box;
+
+}
+
+
+.article-image-section .article-container {
+
+    max-width: 1200px;
+
+}
+
+
+.article-image-section img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 550px;
+
+    object-fit: cover;
+
+}
+
+
+/* ==================================================
+   ARTICLE CONTENT
+================================================== */
+
+.article-content-section {
+
+    width: 100%;
+
+    background: #f5f5f3;
+
+    padding: 70px 20px 100px;
+
+    box-sizing: border-box;
+
+}
+
+
+.article-layout {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 280px;
+
+    gap: 70px;
+
+    align-items: start;
+
+}
+
+
+/* ==================================================
+   MAIN ARTICLE
+================================================== */
+
+.article-content {
+
+    min-width: 0;
+
+}
+
+
+.article-content p {
+
+    color: #555555;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+}
+
+
+.article-content .article-intro {
+
+    margin-top: 0;
+
+    color: #222222;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    line-height: 1.8;
+
+}
+
+
+.article-content h2 {
+
+    margin: 45px 0 15px;
+
+    color: #111111;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 42px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.article-ending {
+
+    margin-top: 45px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #dddddd;
+
+}
+
+
+.article-ending p {
+
+    color: #222222;
+
+    font-weight: 600;
+
+}
+
+
+/* ==================================================
+   SIDEBAR
+================================================== */
+
+.article-sidebar {
+
+    position: sticky;
+
+    top: 100px;
+
+}
+
+
+.sidebar-box {
+
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #dddddd;
+
+}
+
+
+.sidebar-box span {
+
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #e10600;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.sidebar-box p {
+
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+.all-blogs-button {
+
+    display: block;
+
+    margin-top: 15px;
+
+    padding: 16px 20px;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+
+}
+
+
+.all-blogs-button:hover {
+
+    background: #e10600;
+
+}
+
+
+/* ==================================================
+   DARK MODE
+   Only colors are changed.
+   Layout and spacing remain unchanged.
+================================================== */
+
+body.dark-mode .article-header {
+
+    background: #111111;
+
+}
+
+
+body.dark-mode .back-link {
+
+    color: #aaaaaa;
+
+}
+
+
+body.dark-mode .back-link:hover {
+
+    color: #ffffff;
+
+}
+
+
+body.dark-mode .article-header h1 {
+
+    color: #ffffff;
+
+}
+
+
+body.dark-mode .article-meta {
+
+    color: #aaaaaa;
+
+}
+
+
+/* ==================================================
+   DARK MODE - IMAGE AREA
+================================================== */
+
+body.dark-mode .article-image-section {
+
+    background: #101010;
+
+}
+
+
+/* ==================================================
+   DARK MODE - ARTICLE CONTENT
+================================================== */
+
+body.dark-mode .article-content-section {
+
+    background: #101010;
+
+}
+
+
+body.dark-mode .article-content p {
+
+    color: #b5b5b5;
+
+}
+
+
+body.dark-mode .article-content .article-intro {
+
+    color: #eeeeee;
+
+}
+
+
+body.dark-mode .article-content h2 {
+
+    color: #ffffff;
+
+}
+
+
+body.dark-mode .article-ending {
+
+    border-top-color: #333333;
+
+}
+
+
+body.dark-mode .article-ending p {
+
+    color: #eeeeee;
+
+}
+
+
+/* ==================================================
+   DARK MODE - SIDEBAR
+================================================== */
+
+body.dark-mode .sidebar-box {
+
+    background: #1b1b1b;
+
+    border-color: #353535;
+
+}
+
+
+body.dark-mode .sidebar-box span {
+
+    color: #e10600;
+
+}
+
+
+body.dark-mode .sidebar-box p {
+
+    color: #aaaaaa;
+
+}
+
+
+body.dark-mode .all-blogs-button {
+
+    background: #f1f1f1;
+
+    color: #111111;
+
+}
+
+
+body.dark-mode .all-blogs-button:hover {
+
+    background: #e10600;
+
+    color: #ffffff;
+
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .article-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+
+    .article-sidebar {
+
+        position: static;
+
+    }
+
+
+    .article-image-section img {
+
+        height: 450px;
+
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .article-header {
+
+        padding: 90px 18px 55px;
+
+    }
+
+
+    .article-header h1 {
+
+        font-size: 58px;
+
+    }
+
+
+    .article-meta {
+
+        flex-direction: column;
+
+        gap: 8px;
+
+    }
+
+
+    .article-image-section {
+
+        padding: 25px 15px 0;
+
+    }
+
+
+    .article-image-section img {
+
+        height: 260px;
+
+    }
+
+
+    .article-content-section {
+
+        padding: 50px 18px 70px;
+
+    }
+
+
+    .article-content .article-intro {
+
+        font-size: 17px;
+
+    }
+
+
+    .article-content p {
+
+        font-size: 15px;
+
+        line-height: 1.8;
+
+    }
+
+
+    .article-content h2 {
+
+        font-size: 34px;
+
+    }
+
+}

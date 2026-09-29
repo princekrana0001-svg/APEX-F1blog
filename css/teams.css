@@ -1,0 +1,600 @@
+/* ==================================================
+   APEX - TEAMS PAGE
+================================================== */
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.teams-hero {
+
+    background: var(--black);
+
+    color: var(--white);
+
+    padding: 150px 0 90px;
+
+}
+
+
+.teams-hero-content {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+}
+
+
+.teams-hero .section-number {
+
+    color: var(--red);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.teams-hero h1 {
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: clamp(65px, 9vw, 120px);
+
+    line-height: 0.9;
+
+    margin: 0 0 25px;
+
+}
+
+
+.teams-hero p:last-child {
+
+    max-width: 650px;
+
+    color: #c8c8c8;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+
+
+/* ==================================================
+   CONTENT
+================================================== */
+
+.teams-content {
+
+    background: var(--background);
+
+    padding: 80px 0 110px;
+
+}
+
+
+.teams-container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+}
+
+
+
+/* ==================================================
+   SEARCH
+================================================== */
+
+.team-controls {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+    margin-bottom: 45px;
+
+}
+
+
+.team-search {
+
+    width: 100%;
+
+    max-width: 500px;
+
+}
+
+
+.team-search input {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 16px 20px;
+
+    border: 1px solid var(--light-grey);
+
+    background: var(--white);
+
+    color: var(--black);
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+}
+
+
+.team-search input:focus {
+
+    border-color: var(--red);
+
+}
+
+
+.team-result-info {
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 8px;
+
+}
+
+
+.team-result-info span:first-child {
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 42px;
+
+    color: var(--black);
+
+}
+
+
+.team-result-info span:last-child {
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: var(--grey);
+
+}
+
+
+
+/* ==================================================
+   TEAM GRID
+================================================== */
+
+.teams-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+
+    align-items: start;
+
+}
+
+
+
+/* ==================================================
+   TEAM CARD
+================================================== */
+
+.team-card {
+
+    position: relative;
+
+    display: block;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    background: var(--white);
+
+    border: 1px solid #e4e4e4;
+
+    color: var(--black);
+
+    cursor: default;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+
+}
+
+
+.team-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: var(--red);
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.14);
+
+    z-index: 5;
+
+}
+
+
+
+/* ==================================================
+   TEAM IMAGE
+================================================== */
+
+.team-image {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 300px;
+
+    overflow: hidden;
+
+    background: #ddd;
+
+}
+
+
+.team-image img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition: transform 0.5s ease;
+
+}
+
+
+.team-card:hover .team-image img {
+
+    transform: scale(1.06);
+
+}
+
+
+
+/* ==================================================
+   TEAM INFO
+================================================== */
+
+.team-info {
+
+    padding: 22px 22px 20px;
+
+}
+
+
+.team-info p {
+
+    margin: 0 0 7px;
+
+    color: var(--red);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.team-info h2 {
+
+    margin: 0;
+
+    color: var(--black);
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 34px;
+
+    line-height: 1;
+
+}
+
+
+
+/* ==================================================
+   HOVER DETAILS
+================================================== */
+
+.team-details {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    padding: 0 22px;
+
+    opacity: 0;
+
+    transform: translateY(-10px);
+
+    transition:
+        max-height 0.45s ease,
+        opacity 0.35s ease,
+        transform 0.35s ease,
+        padding 0.35s ease;
+
+}
+
+
+.team-card:hover .team-details {
+
+    max-height: 240px;
+
+    padding: 0 22px 25px;
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+
+/* ==================================================
+   DETAIL ROW
+================================================== */
+
+.detail-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 9px 0;
+
+    border-top: 1px solid #e6e6e6;
+
+}
+
+
+.detail-row span {
+
+    color: var(--grey);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+.detail-row strong {
+
+    color: var(--black);
+
+    font-size: 11px;
+
+    text-align: right;
+
+}
+
+
+
+/* ==================================================
+   DESCRIPTION
+================================================== */
+
+.team-description {
+
+    margin: 15px 0 0;
+
+    color: var(--grey);
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+}
+
+
+
+/* ==================================================
+   NO RESULTS
+================================================== */
+
+.team-no-results {
+
+    display: none;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+}
+
+
+.team-no-results.show {
+
+    display: block;
+
+}
+
+
+.team-no-results h2 {
+
+    margin: 0 0 10px;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 50px;
+
+}
+
+
+.team-no-results p {
+
+    margin: 0;
+
+    color: var(--grey);
+
+}
+
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1000px) {
+
+    .teams-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .teams-hero {
+
+        padding: 120px 0 70px;
+
+    }
+
+
+    .teams-content {
+
+        padding: 60px 0 80px;
+
+    }
+
+
+    .team-controls {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 20px;
+
+    }
+
+
+    .team-search {
+
+        max-width: none;
+
+    }
+
+
+    .teams-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+    }
+
+
+    .team-image {
+
+        height: 300px;
+
+    }
+
+
+    /*
+       Mobile does not have reliable hover,
+       so details remain visible.
+    */
+
+    .team-details {
+
+        max-height: 240px;
+
+        padding: 0 22px 25px;
+
+        opacity: 1;
+
+        transform: none;
+
+    }
+
+
+    .team-info h2 {
+
+        font-size: 36px;
+
+    }
+
+}
+/* ==================================================
+   TEAMS - HERO DARK MODE ONLY
+================================================== */
+
+body.dark-mode .teams-hero {
+    background-color: #101010 !important;
+}
+
+body.dark-mode .teams-hero h1 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .teams-hero p {
+    color: #aaaaaa !important;
+}
+
+body.dark-mode .teams-hero .section-label {
+    color: #e10600 !important;
+}

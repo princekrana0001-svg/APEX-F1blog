@@ -1,0 +1,1666 @@
+/* ==================================================
+   APEX - FORMULA 1 BLOG
+   MAIN STYLESHEET
+================================================== */
+
+
+/* ==================================================
+   ROOT VARIABLES
+================================================== */
+
+:root {
+
+    --black: #111111;
+
+    --white: #ffffff;
+
+    --background: #f5f5f3;
+
+    --grey: #6b6b6b;
+
+    --light-grey: #dddddd;
+
+    --red: #e10600;
+
+}
+
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family: "Inter", sans-serif;
+
+    background-color: var(--background);
+
+    color: var(--black);
+
+    line-height: 1.6;
+
+}
+
+
+/* ==================================================
+   GENERAL
+================================================== */
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+button {
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+}
+
+
+img {
+
+    display: block;
+
+}
+
+
+.container {
+
+    width: min(1200px, 90%);
+
+    margin: auto;
+
+}
+
+
+/* ==================================================
+   NAVBAR
+================================================== */
+
+.navbar {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background-color: rgba(245, 245, 243, 0.95);
+
+    border-bottom: 1px solid var(--light-grey);
+
+    backdrop-filter: blur(10px);
+
+}
+
+
+.nav-container {
+
+    width: min(1200px, 90%);
+
+    height: 76px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+/* ==================================================
+   LOGO
+================================================== */
+
+.logo {
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 38px;
+
+    letter-spacing: 2px;
+
+    color: var(--black);
+
+    transition: 0.3s ease;
+
+}
+
+
+.logo:hover {
+
+    color: var(--red);
+
+}
+
+
+/* ==================================================
+   NAVIGATION
+================================================== */
+
+.nav-menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+}
+
+
+.nav-link {
+
+    position: relative;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #444444;
+
+    transition: 0.3s ease;
+
+}
+
+
+.nav-link:hover {
+
+    color: var(--black);
+
+}
+
+
+.nav-link.active {
+
+    color: var(--black);
+
+}
+
+
+.nav-link.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 100%;
+
+    height: 2px;
+
+    background-color: var(--red);
+
+}
+
+
+/* ==================================================
+   NAVIGATION ACTIONS
+================================================== */
+
+.nav-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.icon-button,
+.menu-button {
+
+    width: 40px;
+
+    height: 40px;
+
+    border: 1px solid var(--light-grey);
+
+    background-color: var(--white);
+
+    color: var(--black);
+
+    border-radius: 50%;
+
+    font-size: 17px;
+
+    transition: 0.3s ease;
+
+}
+
+
+.icon-button:hover,
+.menu-button:hover {
+
+    background-color: var(--black);
+
+    color: var(--white);
+
+    border-color: var(--black);
+
+}
+
+
+.menu-button {
+
+    display: none;
+
+}
+
+
+/* ==================================================
+   HERO SECTION
+================================================== */
+
+.hero {
+
+    position: relative;
+
+    min-height: 720px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background-image: url("../assets/images/hero/hero-f1.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.90) 0%,
+            rgba(0, 0, 0, 0.62) 45%,
+            rgba(0, 0, 0, 0.15) 100%
+        );
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1200px, 90%);
+
+    margin: auto;
+
+    color: var(--white);
+
+}
+
+
+.hero-label {
+
+    color: #ff3b35;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero h1 {
+
+    max-width: 850px;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: clamp(70px, 10vw, 145px);
+
+    line-height: 0.88;
+
+    letter-spacing: 2px;
+
+}
+
+
+.hero-description {
+
+    max-width: 480px;
+
+    margin-top: 30px;
+
+    color: #d5d5d5;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+
+/* ==================================================
+   PRIMARY BUTTON
+================================================== */
+
+.primary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    margin-top: 35px;
+
+    padding: 15px 22px;
+
+    background-color: var(--white);
+
+    color: var(--black);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+
+}
+
+
+.primary-button span {
+
+    font-size: 20px;
+
+    transition: 0.3s ease;
+
+}
+
+
+.primary-button:hover {
+
+    background-color: var(--red);
+
+    color: var(--white);
+
+}
+
+
+.primary-button:hover span {
+
+    transform: translateX(5px);
+
+}
+
+
+/* ==================================================
+   HERO SCROLL
+================================================== */
+
+.hero-scroll {
+
+    position: absolute;
+
+    z-index: 2;
+
+    right: 5%;
+
+    bottom: 35px;
+
+    color: #aaaaaa;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.hero-scroll span:last-child {
+
+    color: var(--white);
+
+    font-size: 18px;
+
+}
+
+
+/* ==================================================
+   COMMON SECTION
+================================================== */
+
+.section-container {
+
+    width: min(1200px, 90%);
+
+    margin: auto;
+
+}
+
+
+.section-heading {
+
+    margin-bottom: 45px;
+
+}
+
+
+.section-number {
+
+    color: var(--red);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.section-heading h2,
+.latest-header h2 {
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: clamp(45px, 6vw, 75px);
+
+    line-height: 1;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* ==================================================
+   FEATURED SECTION
+================================================== */
+
+.featured-section {
+
+    padding: 110px 0;
+
+    background-color: var(--background);
+
+}
+
+
+/* ==================================================
+   FEATURED BLOG
+================================================== */
+
+.featured-blog {
+
+    display: grid;
+
+    grid-template-columns: 1.4fr 1fr;
+
+    min-height: 500px;
+
+    background-color: var(--white);
+
+}
+
+
+.featured-image {
+
+    overflow: hidden;
+
+}
+
+
+.featured-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+
+}
+
+
+.featured-blog:hover .featured-image img {
+
+    transform: scale(1.04);
+
+}
+
+
+.featured-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 60px;
+
+}
+
+
+.blog-category {
+
+    color: var(--red);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.featured-content h3 {
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: clamp(42px, 5vw, 65px);
+
+    line-height: 0.95;
+
+}
+
+
+.featured-description {
+
+    margin-top: 25px;
+
+    color: var(--grey);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+.blog-meta {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+    color: #999999;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+}
+
+
+.text-button {
+
+    width: fit-content;
+
+    margin-top: 35px;
+
+    padding-bottom: 5px;
+
+    border-bottom: 1px solid var(--black);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+
+}
+
+
+.text-button:hover {
+
+    color: var(--red);
+
+    border-color: var(--red);
+
+}
+
+
+/* ==================================================
+   LATEST BLOGS
+================================================== */
+
+.latest-section {
+
+    padding: 110px 0;
+
+    background-color: var(--white);
+
+}
+
+
+.latest-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    margin-bottom: 45px;
+
+}
+
+
+.view-all {
+
+    color: var(--black);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    border-bottom: 1px solid var(--black);
+
+    padding-bottom: 5px;
+
+}
+
+
+/* ==================================================
+   BLOG GRID
+================================================== */
+
+.blog-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.blog-card {
+
+    background-color: var(--background);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.blog-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.blog-image {
+
+    position: relative;
+
+    height: 230px;
+
+    overflow: hidden;
+
+}
+
+
+.blog-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+
+}
+
+
+.blog-card:hover .blog-image img {
+
+    transform: scale(1.06);
+
+}
+
+
+.blog-tag {
+
+    position: absolute;
+
+    top: 15px;
+
+    left: 15px;
+
+    padding: 6px 10px;
+
+    background-color: var(--red);
+
+    color: var(--white);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+.blog-card-content {
+
+    padding: 25px;
+
+}
+
+
+.blog-card-content h3 {
+
+    font-size: 20px;
+
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+
+}
+
+
+.blog-card-content > p:not(.blog-category) {
+
+    color: var(--grey);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+.card-footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 25px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid var(--light-grey);
+
+    color: #888888;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* ==================================================
+   EXPLORE SECTION
+================================================== */
+
+.explore-section {
+
+    padding: 110px 0;
+
+    background-color: var(--black);
+
+    color: var(--white);
+
+}
+
+
+.light-heading .section-number {
+
+    color: #ff3b35;
+
+}
+
+
+.light-heading h2 {
+
+    color: var(--white);
+
+}
+
+
+.explore-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid #333333;
+
+    border-left: 1px solid #333333;
+
+}
+
+
+.explore-card {
+
+    position: relative;
+
+    min-height: 280px;
+
+    padding: 35px;
+
+    border-right: 1px solid #333333;
+
+    border-bottom: 1px solid #333333;
+
+    transition: 0.3s ease;
+
+}
+
+
+.explore-card:hover {
+
+    background-color: #1b1b1b;
+
+}
+
+
+.explore-card > span {
+
+    color: #666666;
+
+    font-size: 12px;
+
+}
+
+
+.explore-card h3 {
+
+    margin-top: 80px;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 40px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.explore-card p {
+
+    margin-top: 8px;
+
+    max-width: 180px;
+
+    color: #888888;
+
+    font-size: 12px;
+
+}
+
+
+.explore-card strong {
+
+    position: absolute;
+
+    right: 30px;
+
+    bottom: 30px;
+
+    color: var(--red);
+
+    font-size: 25px;
+
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.footer {
+
+    background-color: var(--black);
+
+    color: var(--white);
+
+    padding-top: 60px;
+
+}
+
+
+.footer-container {
+
+    width: min(1200px, 90%);
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    padding-bottom: 50px;
+
+}
+
+
+.footer-brand h2 {
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 40px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.footer-brand p {
+
+    margin-top: 8px;
+
+    color: #999999;
+
+    font-size: 14px;
+
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+.footer-links a {
+
+    color: #aaaaaa;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+
+}
+
+
+.footer-links a:hover {
+
+    color: var(--white);
+
+}
+
+
+.footer-bottom {
+
+    border-top: 1px solid #292929;
+
+    text-align: center;
+
+    padding: 20px;
+
+    color: #777777;
+
+    font-size: 13px;
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+
+
+    /* NAVIGATION */
+
+    .nav-menu {
+
+        display: none;
+
+        position: absolute;
+
+        top: 76px;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px;
+
+        background-color: var(--white);
+
+        border-bottom: 1px solid var(--light-grey);
+
+        flex-direction: column;
+
+        gap: 22px;
+
+    }
+
+
+    .nav-menu.show {
+
+        display: flex;
+
+    }
+
+
+    .menu-button {
+
+        display: block;
+
+    }
+
+
+    .nav-link.active::after {
+
+        display: none;
+
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        min-height: 650px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 70px;
+
+    }
+
+
+    .hero-scroll {
+
+        display: none;
+
+    }
+
+
+    /* SECTIONS */
+
+    .featured-section,
+    .latest-section,
+    .explore-section {
+
+        padding: 75px 0;
+
+    }
+
+
+    /* FEATURED */
+
+    .featured-blog {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .featured-image {
+
+        height: 300px;
+
+    }
+
+
+    .featured-content {
+
+        padding: 35px;
+
+    }
+
+
+    /* BLOGS */
+
+    .blog-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .latest-header {
+
+        align-items: start;
+
+        gap: 20px;
+
+        flex-direction: column;
+
+    }
+
+
+    /* EXPLORE */
+
+    .explore-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .explore-card {
+
+        min-height: 220px;
+
+    }
+
+
+    .explore-card h3 {
+
+        margin-top: 50px;
+
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+
+        flex-direction: column;
+
+    }
+
+
+    .footer-links {
+
+        flex-wrap: wrap;
+
+        gap: 20px;
+
+    }
+
+}
+
+
+/* ==================================================
+   APEX DARK MODE
+   Added only for theme switching.
+   Existing layout/design remains unchanged.
+================================================== */
+
+body.dark-mode {
+    --black: #f1f1f1;
+    --white: #181818;
+    --background: #101010;
+    --grey: #aaaaaa;
+    --light-grey: #353535;
+    --red: #e10600;
+}
+
+/* Page */
+
+body.dark-mode {
+    background-color: var(--background);
+    color: var(--black);
+}
+
+/* Navbar */
+
+body.dark-mode .navbar {
+    background-color: rgba(18, 18, 18, 0.96);
+    border-bottom-color: var(--light-grey);
+}
+
+body.dark-mode .nav-link {
+    color: #bdbdbd;
+}
+
+body.dark-mode .nav-link:hover,
+body.dark-mode .nav-link.active {
+    color: #ffffff;
+}
+
+body.dark-mode .icon-button,
+body.dark-mode .menu-button {
+    background-color: #202020;
+    color: #ffffff;
+    border-color: #3a3a3a;
+}
+
+body.dark-mode .icon-button:hover,
+body.dark-mode .menu-button:hover {
+    background-color: #ffffff;
+    color: #111111;
+    border-color: #ffffff;
+}
+
+/* Normal sections */
+
+body.dark-mode .featured-section {
+    background-color: #101010;
+}
+
+body.dark-mode .latest-section {
+    background-color: #181818;
+}
+
+/* Section headings */
+
+body.dark-mode .section-heading h2,
+body.dark-mode .latest-header h2 {
+    color: #f1f1f1;
+}
+
+body.dark-mode .section-number {
+    color: #ff3b35;
+}
+
+/* Featured story */
+
+body.dark-mode .featured-blog {
+    background-color: #1d1d1d;
+}
+
+body.dark-mode .featured-content h3 {
+    color: #f5f5f5;
+}
+
+body.dark-mode .featured-description {
+    color: #aaaaaa;
+}
+
+body.dark-mode .blog-meta {
+    color: #888888;
+}
+
+body.dark-mode .text-button {
+    color: #f1f1f1;
+    border-bottom-color: #f1f1f1;
+}
+
+body.dark-mode .text-button:hover {
+    color: var(--red);
+    border-color: var(--red);
+}
+
+/* Latest blog cards */
+
+body.dark-mode .blog-card {
+    background-color: #101010;
+}
+
+body.dark-mode .blog-card-content h3 {
+    color: #f1f1f1;
+}
+
+body.dark-mode .blog-card-content > p:not(.blog-category) {
+    color: #aaaaaa;
+}
+
+body.dark-mode .card-footer {
+    border-top-color: #353535;
+    color: #888888;
+}
+
+body.dark-mode .view-all {
+    color: #f1f1f1;
+    border-bottom-color: #f1f1f1;
+}
+
+body.dark-mode .view-all:hover {
+    color: var(--red);
+    border-color: var(--red);
+}
+
+/* Explore section
+   Keep the original black section,
+   only improve contrast for dark theme. */
+
+body.dark-mode .explore-section {
+    background-color: #080808;
+}
+
+body.dark-mode .explore-grid {
+    border-top-color: #2d2d2d;
+    border-left-color: #2d2d2d;
+}
+
+body.dark-mode .explore-card {
+    border-right-color: #2d2d2d;
+    border-bottom-color: #2d2d2d;
+}
+
+body.dark-mode .explore-card:hover {
+    background-color: #171717;
+}
+
+body.dark-mode .explore-card > span {
+    color: #777777;
+}
+
+body.dark-mode .explore-card p {
+    color: #999999;
+}
+
+/* Footer */
+
+body.dark-mode .footer {
+    background-color: #080808;
+    color: #f1f1f1;
+}
+
+body.dark-mode .footer-brand p {
+    color: #999999;
+}
+
+body.dark-mode .footer-links a {
+    color: #aaaaaa;
+}
+
+body.dark-mode .footer-links a:hover {
+    color: #ffffff;
+}
+
+body.dark-mode .footer-bottom {
+    border-top-color: #292929;
+    color: #777777;
+}
+
+/* Mobile menu */
+
+@media (max-width: 768px) {
+
+    body.dark-mode .nav-menu {
+        background-color: #181818;
+        border-bottom-color: #353535;
+    }
+
+}
+/* ==================================================
+   FIX - DARK MODE HERO TEXT
+================================================== */
+
+body.dark-mode .hero-content h1 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .hero-content p {
+    color: #dddddd !important;
+}
+
+body.dark-mode .hero-label {
+    color: #ff3b35 !important;
+}
+
+body.dark-mode .hero-description {
+    color: #dddddd !important;
+}
+
+body.dark-mode .hero-scroll {
+    color: #bbbbbb !important;
+}
+
+body.dark-mode .primary-button {
+    background-color: #181818 !important;
+    color: #ffffff !important;
+    border-color: #303030 !important;
+}
+
+body.dark-mode .primary-button:hover {
+    background-color: #e10600 !important;
+    color: #ffffff !important;
+    border-color: #e10600 !important;
+}
+/* ==================================================
+   FINAL BLOG PAGE DARK MODE FIX
+================================================== */
+
+
+/* ---------- NAVBAR ---------- */
+
+body.dark-mode .navbar {
+    background-color: #151515 !important;
+    border-bottom-color: #303030 !important;
+}
+
+
+/* Same navigation as other pages */
+
+body.dark-mode .nav-link {
+    font-family: "Inter", sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #bdbdbd !important;
+}
+
+body.dark-mode .nav-link:hover,
+body.dark-mode .nav-link.active {
+    color: #ffffff !important;
+}
+
+
+/* ---------- ROUND THEME BUTTON ---------- */
+
+body.dark-mode .icon-button {
+    width: 40px !important;
+    height: 40px !important;
+
+    min-width: 40px !important;
+    min-height: 40px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    box-sizing: border-box !important;
+
+    background-color: #202020 !important;
+    color: #ffffff !important;
+
+    border: 1px solid #3a3a3a !important;
+    border-radius: 50% !important;
+
+    font-family: Arial, sans-serif !important;
+    font-size: 17px !important;
+    line-height: 1 !important;
+}
+
+body.dark-mode .icon-button:hover {
+    background-color: #e10600 !important;
+    border-color: #e10600 !important;
+    color: #ffffff !important;
+}
+
+
+/* ---------- BLOG PAGE ---------- */
+
+body.dark-mode:has(#blogSearch) {
+    background-color: #101010 !important;
+    color: #f2f2f2 !important;
+}
+
+body.dark-mode:has(#blogSearch) main {
+    background-color: #101010 !important;
+}
+
+
+/* ---------- SEARCH ---------- */
+
+body.dark-mode:has(#blogSearch) #blogSearch {
+    background-color: #1b1b1b !important;
+    color: #ffffff !important;
+    border: 1px solid #353535 !important;
+}
+
+body.dark-mode:has(#blogSearch) #blogSearch::placeholder {
+    color: #858585 !important;
+}
+
+
+/* ---------- FILTER BUTTONS ---------- */
+
+body.dark-mode:has(#blogSearch) .filter-button {
+    background-color: #1b1b1b !important;
+    color: #f2f2f2 !important;
+    border-color: #353535 !important;
+}
+
+body.dark-mode:has(#blogSearch) .filter-button:hover {
+    background-color: #292929 !important;
+    color: #ffffff !important;
+    border-color: #e10600 !important;
+}
+
+body.dark-mode:has(#blogSearch) .filter-button.active {
+    background-color: #e10600 !important;
+    color: #ffffff !important;
+    border-color: #e10600 !important;
+}
+
+
+/* ---------- BLOG CARDS ---------- */
+
+body.dark-mode:has(#blogSearch) .full-blog-card {
+    background-color: #181818 !important;
+    color: #f2f2f2 !important;
+    border-color: #303030 !important;
+}
+
+body.dark-mode:has(#blogSearch) .full-blog-card h2,
+body.dark-mode:has(#blogSearch) .full-blog-card h3,
+body.dark-mode:has(#blogSearch) .full-blog-card h4 {
+    color: #ffffff !important;
+}
+
+body.dark-mode:has(#blogSearch) .full-blog-card p {
+    color: #aaaaaa !important;
+}
+
+body.dark-mode:has(#blogSearch) .full-blog-card .blog-category {
+    color: #e10600 !important;
+}
+
+
+/* ---------- CARD FOOTER ---------- */
+
+body.dark-mode:has(#blogSearch) .full-blog-card .card-footer {
+    border-top-color: #303030 !important;
+    color: #888888 !important;
+}
+
+
+/* ---------- KEEP READ MORE / ARROW LINK ---------- */
+
+body.dark-mode:has(#blogSearch) .full-blog-card .card-footer a,
+body.dark-mode:has(#blogSearch) .blog-card-link {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+body.dark-mode:has(#blogSearch) .full-blog-card .card-footer a:hover,
+body.dark-mode:has(#blogSearch) .blog-card-link:hover {
+    color: #e10600 !important;
+}
+
+
+/* ---------- VIEW ALL STAYS ---------- */
+
+body.dark-mode:has(#blogSearch) .view-all {
+    color: #ffffff !important;
+    border-bottom-color: #ffffff !important;
+}
+
+body.dark-mode:has(#blogSearch) .view-all:hover {
+    color: #e10600 !important;
+    border-bottom-color: #e10600 !important;
+}
+.feedback-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #e10600;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: 0.3s ease;
+}
+
+.feedback-button:hover {
+    background: #111111;
+    color: #ffffff !important;
+}
