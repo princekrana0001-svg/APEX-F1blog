@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blogs | APEX F1</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/blogs.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         NAVBAR
+    ================================================== -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                APEX
+            </a>
+
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="blogs.html" class="active">
+                    Blogs
+                </a>
+
+                <a href="drivers.html">
+                    Drivers
+                </a>
+
+                <a href="teams.html">
+                    Teams
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <button id="themeToggle" class="theme-button">
+                    ☾
+                </button>
+
+                <button id="menuButton" class="menu-button">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         BLOG HERO
+    ================================================== -->
+
+    <section class="blogs-hero">
+
+        <div class="blogs-hero-content">
+
+            <p class="section-label">
+                APEX F1 BLOG
+            </p>
+
+            <h1>
+                F1 BLOGS
+            </h1>
+
+            <p>
+                Explore stories about racing, technology,
+                drivers, teams and the history of Formula 1.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         BLOG CONTENT
+    ================================================== -->
+
+    <main class="blogs-content">
+
+
+        <!-- SEARCH AND FILTER -->
+
+        <section class="blog-controls">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="blogSearch"
+                    placeholder="Search blogs..."
+                    autocomplete="off"
+                >
+
+                <span class="search-icon">
+                    🔍
+                </span>
+
+            </div>
+
+
+            <div class="category-filters">
+
+                <button
+                    class="filter-button active"
+                    data-category="all">
+                    All
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="racing">
+                    Racing
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="technology">
+                    Technology
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="drivers">
+                    Drivers
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="history">
+                    History
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- RESULT COUNT -->
+
+        <div class="blog-result-info">
+
+            <p>
+                Showing
+                <span id="blogCount">8</span>
+                blogs
+            </p>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             BLOG GRID
+        ================================================== -->
+
+        <section class="full-blog-grid" id="blogGrid">
+
+
+            <!-- BLOG 1 -->
+
+            <article
+                class="full-blog-card"
+                data-category="technology"
+                data-title="The Evolution of Formula 1 Cars">
+
+                <div class="full-blog-image">
+
+                    <img
+                        src="assets/images/blogs/f1-cars.jpg"
+                        alt="Formula 1 Cars">
+
+                </div>
+
+
+                <div class="full-blog-content">
+
+                    <span class="blog-category">
+                        TECHNOLOGY
+                    </span>
+
+                    <h2>
+                        The Evolution of Formula 1 Cars
+                    </h2>
+
+                    <p>
+                        Discover how Formula 1 cars have evolved
+                        through decades of engineering and innovation.
+                    </p>
+
+
+                    <div class="full-blog-footer">
+
+                        <span>
+                            5 min read
+                        </span>
+
+                        <a href="article.html#1">
+                            READ STORY →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- BLOG 2 -->
+
+            <article
+                class="full-blog-card"
+                data-category="racing"
+                data-title="How F1 Tyres Affect Race Strategy">
+
+                <div class="full-blog-image">
+
+                    <img
+                        src="assets/images/blogs/f1-tyres.jpg"
+                        alt="Formula 1 Tyres">
+
+                </div>
+
+
+                <div class="full-blog-content">
+
+                    <span class="blog-category">
+                        RACING
+                    </span>
+
+                    <h2>
+                        How F1 Tyres Affect Race Strategy
+                    </h2>
+
+                    <p>
+                        Learn how tyre compounds, degradation and
+                        pit stops influence the outcome of a race.
+                    </p>
+
+
+                    <div class="full-blog-footer">
+
+                        <span>
+                            4 min read
+                        </span>
+
+                        <a href="article.html#2">
+                            READ STORY →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- BLOG 3 -->
+
+            <article
+                class="full-blog-card"
+                data-category="technology"
+                data-title="The Science Behind F1 Aerodynamics">
+
+                <div class="full-blog-image">
+
+                    <img
+                        src="assets/images/blogs/f1-aerodynamics.jpg"
+                        alt="Formula 1 Aerodynamics">
+
+                </div>
+
+
+                <div class="full-blog-content">
+
+                    <span class="blog-category">
+                        TECHNOLOGY
+                    </span>
+
+                    <h2>
+                        The Science Behind F1 Aerodynamics
+                    </h2>
+
+                    <p>
+                        Explore how airflow, wings and downforce help
+                        Formula 1 cars achieve incredible performance.
+                    </p>
+
+
+                    <div class="full-blog-footer">
+
+                        <span>
+                            6 min read
+                        </span>
+
+                        <a href="article.html#3">
+                            READ STORY →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- BLOG 4 -->
+
+            <article
+                class="full-blog-card"
+                data-category="racing"
+                data-title="Why Pit Stops Matter So Much">
+
+                <div class="full-blog-image">
+
+                    <img
+                        src="assets/images/blogs/f1-pitstop.jpg"
+                        alt="Formula 1 Pit Stop">
+
+                </div>
+
+
+                <div class="full-blog-content">
+
+                    <span class="blog-category">
+                        RACING
+                    </span>
+
+                    <h2>
+                        Why Pit Stops Matter So Much
+                    </h2>
+
+                    <p>
+                        A few seconds in the pit lane can completely
+                        change a driver's position during a race.
+                    </p>
+
+
+                    <div class="full-blog-footer">
+
+                        <span>
+                            4 min read
+                        </span>
+
+                        <a href="article.html#4">
+                            READ STORY →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- BLOG 5 -->
+
+            <article
+                class="full-blog-card"
+                data-category="history"
+                data-title="From V10 Engines to Hybrid Power">
+
+                <div class="full-blog-image">
+
+                    <img
+                        src="assets/images/blogs/f1-engine.jpg"
+                        alt="Formula 1 Engine">
+
+                </div>
+
+
+                <div class="full-blog-content">
+
+                    <span class="blog-category">
+                        HISTORY
+                    </span>
+
+                    <h2>
+                        From V10 Engines to Hybrid Power
+                    </h2>
+
+                    <p>
+                        Take a journey through the major changes in
+                        Formula 1 engine technology.
+                    </p>
+
+
+                    <div class="full-blog-footer">
+
+                        <span>
+                            5 min read
+                        </span>
+
+                        <a href="article.html#5">
+                            READ STORY →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- BLOG 6 -->
+
+            <article
+                class="full-blog-card"
+                data-category="drivers"
+                data-title="What Makes a Great F1 Driver?">
+
+                <div class="full-blog-image">
+
+                    <img
+                        src="assets/images/blogs/f1-driver.jpg"
+                        alt="Formula 1 Driver">
+
+                </div>
+
+
+                <div class="full-blog-content">
+
+                    <span class="blog-category">
+                        DRIVERS
+                    </span>
+
+                    <h2>
+                        What Makes a Great F1 Driver?
+                    </h2>
+
+                    <p>
+                        Speed is only one part of Formula 1. Discover
+                        the skills required to become a great driver.
+                    </p>
+
+
+                    <div class="full-blog-footer">
+
+                        <span>
+                            5 min read
+                        </span>
+
+                        <a href="article.html#6">
+                            READ STORY →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- BLOG 7 -->
+
+            <article
+                class="full-blog-card"
+                data-category="technology"
+                data-title="How Downforce Makes F1 Cars Faster">
+
+                <div class="full-blog-image">
+
+                    <img
+                        src="assets/images/blogs/f1-downforce.jpg"
+                        alt="Formula 1 Downforce">
+
+                </div>
+
+
+                <div class="full-blog-content">
+
+                    <span class="blog-category">
+                        TECHNOLOGY
+                    </span>
+
+                    <h2>
+                        How Downforce Makes F1 Cars Faster
+                    </h2>
+
+                    <p>
+                        Understand how aerodynamic downforce helps
+                        F1 cars generate grip through high-speed corners.
+                    </p>
+
+
+                    <div class="full-blog-footer">
+
+                        <span>
+                            5 min read
+                        </span>
+
+                        <a href="article.html#7">
+                            READ STORY →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- BLOG 8 -->
+
+            <article
+                class="full-blog-card"
+                data-category="history"
+                data-title="The Changing Face of Formula 1">
+
+                <div class="full-blog-image">
+
+                    <img
+                        src="assets/images/blogs/f1-history.jpg"
+                        alt="Formula 1 History">
+
+                </div>
+
+
+                <div class="full-blog-content">
+
+                    <span class="blog-category">
+                        HISTORY
+                    </span>
+
+                    <h2>
+                        The Changing Face of Formula 1
+                    </h2>
+
+                    <p>
+                        Explore how Formula 1 has changed from its
+                        early days to the modern era of motorsport.
+                    </p>
+
+
+                    <div class="full-blog-footer">
+
+                        <span>
+                            6 min read
+                        </span>
+
+                        <a href="article.html#8">
+                            READ STORY →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- NO RESULTS -->
+
+        <section
+            class="no-results"
+            id="noResults">
+
+            <h2>
+                No blogs found
+            </h2>
+
+            <p>
+                Try a different search term or category.
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <h2>
+                    APEX
+                </h2>
+
+                <p>
+                    Stories. Speed. The World of Formula 1.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="blogs.html">
+                    Blogs
+                </a>
+
+                <a href="drivers.html">
+                    Drivers
+                </a>
+
+                <a href="teams.html">
+                    Teams
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 APEX F1 Blog. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="js/main.js"></script>
+
+    <script src="js/blogs.js"></script>
+
+
+</body>
+
+</html>
