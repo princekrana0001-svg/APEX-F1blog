@@ -1664,3 +1664,421 @@ body.dark-mode:has(#blogSearch) .view-all:hover {
     background: #111111;
     color: #ffffff !important;
 }
+/* ==================================================
+   WRITE BLOG
+================================================== */
+
+.write-blog-button {
+    height: 42px;
+    padding: 0 20px;
+    border: 1px solid #111111;
+    background: #111111;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.write-blog-button:hover {
+    background: #e10600;
+    border-color: #e10600;
+}
+
+
+/* ==================================================
+   BLOG WRITER
+================================================== */
+
+.blog-writer {
+    display: none;
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 35px;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    box-sizing: border-box;
+}
+
+.blog-writer.show {
+    display: block;
+}
+
+
+.blog-writer-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+
+.blog-writer-label {
+    margin: 0 0 8px;
+    color: #e10600;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+.blog-writer-header h2 {
+    margin: 0;
+    color: #111111;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 42px;
+    letter-spacing: 1px;
+}
+
+
+.close-writer {
+    width: 38px;
+    height: 38px;
+    border: 1px solid #dddddd;
+    background: #ffffff;
+    color: #111111;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+.close-writer:hover {
+    background: #111111;
+    color: #ffffff;
+}
+
+
+/* ==================================================
+   WRITER FORM
+================================================== */
+
+.writer-field {
+    margin-bottom: 22px;
+}
+
+
+.writer-field label {
+    display: block;
+    margin-bottom: 8px;
+    color: #111111;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+
+.writer-field input,
+.writer-field select,
+.writer-field textarea {
+    width: 100%;
+    border: 1px solid #d8d8d8;
+    background: #ffffff;
+    color: #111111;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+
+.writer-field input,
+.writer-field select {
+    height: 52px;
+    padding: 0 15px;
+}
+
+
+.writer-field textarea {
+    min-height: 130px;
+    padding: 15px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+
+.writer-field input:focus,
+.writer-field select:focus,
+.writer-field textarea:focus {
+    border-color: #111111;
+}
+
+
+.writer-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+.image-note {
+    margin: 7px 0 0;
+    color: #888888;
+    font-size: 12px;
+}
+
+
+.image-preview {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 25px;
+}
+
+
+.image-preview img {
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    border: 1px solid #dddddd;
+}
+
+
+.submit-blog-button {
+    width: 100%;
+    height: 52px;
+    border: none;
+    background: #111111;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+
+.submit-blog-button:hover {
+    background: #e10600;
+}
+
+
+.blog-form-message {
+    margin: 15px 0 0;
+    color: #666666;
+    font-size: 13px;
+}
+
+
+.blog-form-message.success {
+    color: #16803c;
+}
+
+
+.blog-form-message.error {
+    color: #e10600;
+}
+
+
+/* ==================================================
+   CUSTOM BLOG MODAL
+================================================== */
+
+.custom-blog-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 5000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+
+.custom-blog-modal-box {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 40px;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+
+.custom-blog-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #dddddd;
+    background: #ffffff;
+    color: #111111;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+.custom-blog-modal-box h2 {
+    margin: 0 45px 10px 0;
+    color: #111111;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 50px;
+    line-height: 1;
+}
+
+
+.custom-blog-modal-meta {
+    margin: 0 0 25px;
+    color: #888888;
+    font-size: 12px;
+}
+
+
+.custom-blog-modal-box > img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    margin-bottom: 25px;
+}
+
+
+.custom-blog-modal-description {
+    margin: 0;
+    color: #555555;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   DARK MODE
+================================================== */
+
+body.dark-mode .write-blog-button {
+    background: #f1f1f1;
+    border-color: #f1f1f1;
+    color: #111111;
+}
+
+
+body.dark-mode .write-blog-button:hover {
+    background: #e10600;
+    border-color: #e10600;
+    color: #ffffff;
+}
+
+
+body.dark-mode .blog-writer {
+    background: #181818;
+    border-color: #353535;
+}
+
+
+body.dark-mode .blog-writer-header h2 {
+    color: #ffffff;
+}
+
+
+body.dark-mode .writer-field label {
+    color: #f1f1f1;
+}
+
+
+body.dark-mode .writer-field input,
+body.dark-mode .writer-field select,
+body.dark-mode .writer-field textarea {
+    background: #202020;
+    border-color: #353535;
+    color: #ffffff;
+}
+
+
+body.dark-mode .writer-field input:focus,
+body.dark-mode .writer-field select:focus,
+body.dark-mode .writer-field textarea:focus {
+    border-color: #ffffff;
+}
+
+
+body.dark-mode .close-writer {
+    background: #202020;
+    border-color: #353535;
+    color: #ffffff;
+}
+
+
+body.dark-mode .close-writer:hover {
+    background: #ffffff;
+    color: #111111;
+}
+
+
+body.dark-mode .submit-blog-button {
+    background: #f1f1f1;
+    color: #111111;
+}
+
+
+body.dark-mode .submit-blog-button:hover {
+    background: #e10600;
+    color: #ffffff;
+}
+
+
+body.dark-mode .custom-blog-modal-box {
+    background: #181818;
+}
+
+
+body.dark-mode .custom-blog-modal-box h2 {
+    color: #ffffff;
+}
+
+
+body.dark-mode .custom-blog-modal-description {
+    color: #aaaaaa;
+}
+
+
+body.dark-mode .custom-blog-close {
+    background: #202020;
+    border-color: #353535;
+    color: #ffffff;
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 700px) {
+
+    .blog-controls {
+        align-items: stretch;
+    }
+
+    .write-blog-button {
+        width: 100%;
+    }
+
+    .blog-writer {
+        padding: 25px 20px;
+    }
+
+    .writer-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .blog-writer-header h2 {
+        font-size: 36px;
+    }
+
+    .custom-blog-modal {
+        padding: 15px;
+    }
+
+    .custom-blog-modal-box {
+        padding: 25px 20px;
+    }
+
+    .custom-blog-modal-box h2 {
+        font-size: 38px;
+    }
+
+}
